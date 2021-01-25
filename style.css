@@ -1,0 +1,47 @@
+.card-wrap > img {
+    border-radius: 50%;
+}
+
+.card-wrap {
+    height: 250px;
+    width: 100%;
+    background: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+  
+.card-description-pane {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,.8);
+    /*color: #fff;*/
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+}
+  
+.card-wrap:hover .card-description-pane {
+    visibility: visible;
+    opacity: 1;
+    /*cursor: pointer;*/
+}
+  
+.card-description {
+    transition: .2s;
+    transform: translateY(1em);
+}
+  
+.card-wrap:hover .card-description {
+    transform: translateY(0);
+}
